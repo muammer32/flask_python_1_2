@@ -13,6 +13,41 @@ def head2():
 def head3():
     return "buda 3 ncü sayfa"
 
+from flask import Flask 
+app = Flask(__name__)
+
+@app.route('/')
+def head():
+    return "hello word"
+
+@app.route('/second')
+def second():
+    return "This is second page"
+
+@app.route('/third')
+def third():
+    return "flask-01-02/This is third page"
+
+from flask import Flask 
+app = Flask(__name__)
+
+@app.route('/')
+def head():
+    return "hello word"
+
+@app.route('/second')
+def second():
+    return "This is second page"
+
+@app.route('/third')
+def third():
+    return "flask-01-02/This is third page"
+
+@app.route('/forth/<string:id>')
+def forth(id):
+    return f'Id of this page is {id}'
+
+
 if __name__ == '__main__':
 
     # app.run(debug=True, port=30000)
